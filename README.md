@@ -13,34 +13,58 @@ Or you can just run the setup script that does the above for you
 
 
 Check status
+
 $sudo systemctl status postresql
 
+
+
 Config file locations
+
 /etc/postgresql/11/main/postgresql.conf
 
+
+
 Test if port is open
+
 $ss -tunelp | grep 5432
 
 
+
 Enter postgresql user
+
 $sudo su - postgres
 
+
+
 create a database user
+
 $ createdb test_db -O test_user1
 
-Enter postgresql console
+
+
 Add a test database user
+
 $alter user test_user1 with password 'DBUserPassword
 
+
+
 List users
+
 $psql -l  | grep test_db
 
+
+
 Enter console as that user
+
 $psql test_db
 
+
+
 Enter dummy data
-%create table test_table ( id int,first_name text, last_name text ); 
-$insert into test_table (id,first_name,last_name) values (1,'John','Doe'); 
+
+%create table test_table ( id int,first_name text, last_name text );
+
+%insert into test_table (id,first_name,last_name) values (1,'John','Doe'); 
 
 
 
