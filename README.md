@@ -14,7 +14,7 @@ Or you can just run the setup script that does the above for you
 
 Check status
 
-$sudo systemctl status postresql
+$sudo systemctl status postgresql
 
 
 
